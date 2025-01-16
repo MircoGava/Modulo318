@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProgettoCasinoGava.ContoCorrente"
+             Title="ContoCorrente"
+             BackgroundColor="LightGrey">
+    <VerticalStackLayout HorizontalOptions="Center" Spacing="10" >
+        <Label 
+            Text="Banca Stato"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            FontSize="Large"
+            TextColor="Black"/>
+        
+            <Label Text="Il tuo conto bancario"
+                   HorizontalOptions="Center"
+                   FontSize="17"
+                   Margin="0,0,25,0"
+                   TextColor="Black"
+                   />
+        
+            <Entry x:Name="EnConto"
+                   WidthRequest="200"
+                   BackgroundColor="White"
+                   TextColor="Black"
+                   IsReadOnly="True"
+                   HorizontalOptions="Center"/>
+        <HorizontalStackLayout>
+            <Frame BackgroundColor="LightSlateGray" >
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Fai una nuova puntata!"
+                           FontSize="20"
+                           HorizontalOptions="Center"/>
+                    <Label Text="Puntata attuale"
+                       FontSize="17"
+                       HorizontalOptions="Center"/>
+                
+                <Entry x:Name="EnPuntataAttuale"
+                       WidthRequest="200"
+                       BackgroundColor="White"
+                       TextColor="Black"
+                       IsReadOnly="True"/>
+                
+                <Label Text="Cambia puntata"
+                       FontSize="17"
+                       HorizontalOptions="Center"/>
+                <Entry x:Name="EnPuntata" 
+                       WidthRequest="200" 
+                       BackgroundColor="White"
+                       Margin="0,15,0,15"
+                       TextColor="Black"/>
+                
+                <Button Text="Nuova puntata"
+                        Pressed="ButPuntata"/>
+            </VerticalStackLayout>
+        </Frame>
+            <Frame BackgroundColor="LightSlateGray">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Chiedi un prestito!"
+                           FontSize="20"
+                           HorizontalOptions="Center"/>
+                    <Label Text="Quanto vuoi aggiungere al tuo conto?"
+                           FontSize="17"
+                           HorizontalOptions="Center"/>
+
+                    <Entry x:Name="EnPrestito"
+                           WidthRequest="200"
+                           BackgroundColor="White"
+                           TextColor="Black"
+                           />
+                    <Button Text="Conferma richiesta"
+                        Pressed="ButPrestito"/>
+                </VerticalStackLayout>
+            </Frame>
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>

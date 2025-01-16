@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ProgettoCasinoGava.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+     BackgroundColor="Black">
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <AbsoluteLayout>
+                <!-- Le cose con absolute layout trovate online per fare una image per background -->
+                <Image Source="im1.jpg"
+                     Aspect="AspectFill"
+                     AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                     AbsoluteLayout.LayoutFlags="All" />
+
+                
+                <StackLayout AbsoluteLayout.LayoutBounds="0.5, 0.5, AutoSize, AutoSize"
+                             AbsoluteLayout.LayoutFlags="PositionProportional">
+                    
+                    
+                                 
+                <Label
+                    FontSize="60"
+                    HorizontalOptions="Center"
+                    Text="Casino FreeCashMoney"              
+                    TextColor="Yellow"
+                    FontFamily="Anton"
+                    Margin="0,200,0,0"/>
+                    
+                <Label
+                    FontSize="25"
+                    HorizontalOptions="Center"
+                    Text="Il nostro casino è pensato per essere una facile fonte di guadagno per tutti! "               
+                    TextColor="Yellow" />
+                <Label
+                    FontSize="20"
+                    HorizontalOptions="Center"
+                    Text="Abbiamo le più alte probabilità di vincita del mondo, quindi cosa aspettate a scommettere, o forse avete paura di diventare ricchi?"
+                    TextColor="Yellow" />
+                <Label
+                    FontSize="10"
+                    HorizontalOptions="Center"
+                    Text="Non si accettano rimborsi, passando alle altre pagine si accetta di non poter denunciare il casino FreeCashMoney per nessun motivo, noi non prendiamo nessuna responsabilità sulle scelte e la salute dei clienti"
+                    TextColor="Red"
+                    Margin="0,390,0,0"/>
+                 
+                </StackLayout>
+            </AbsoluteLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

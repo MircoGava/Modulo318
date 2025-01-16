@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProgettoCasinoGava.Info"
+             Title="Info">
+    <VerticalStackLayout>
+        <Label 
+            Text="Come giocare e regole generali"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="Large"/>
+
+        <Picker 
+            x:Name="pickRegole"
+            Title="Di cosa vuoi sapere di più"
+            ItemDisplayBinding="{Binding Nome}"
+            SelectedIndexChanged="pickRegole_SelectIndexChange"
+            WidthRequest="500"
+            FontSize="20"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"/>
+
+        <HorizontalStackLayout Margin="25,5,25,25" HorizontalOptions="Center">
+            <Frame WidthRequest="475" HeightRequest="475" BackgroundColor="SlateGray" >
+            <VerticalStackLayout >
+                <HorizontalStackLayout Spacing="10">
+                    <Label
+                        Text="Nome: " FontSize="Medium"/>
+                    <Label 
+                        x:Name="LaNome" FontSize="Medium"/>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label
+                        Text="Multiplicatore scommessa: x" FontSize="Medium"/>
+                    <Label 
+                        x:Name="LaMulti" FontSize="Medium"/>
+                </HorizontalStackLayout>
+                <Label
+                        Text="Regole: " FontSize="Medium"/>
+                <Label 
+                        x:Name="LaCome" FontSize="Medium"/>
+            </VerticalStackLayout>
+        </Frame>
+            <Image x:Name="immagini" WidthRequest="475" HeightRequest="475" Margin="50,0,0,0"/>
+        </HorizontalStackLayout>
+        
+    </VerticalStackLayout>
+</ContentPage>

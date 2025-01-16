@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProgettoCasinoGava.Craps"
+             Title="Craps"
+             BackgroundColor="#7a4c43">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label 
+                Text="Craps"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                FontSize="55"
+                TextColor="Black"/>
+            <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Margin="50">
+                
+            <Frame BackgroundColor="#906a63" WidthRequest="500">
+                <VerticalStackLayout>
+                <Label Text="Scommessa:"
+                       FontSize="25"
+                       HorizontalOptions="Center"/>
+
+                <Entry  x:Name="EnScommessa"
+                        WidthRequest="200"
+                        BackgroundColor="White"
+                        TextColor="Black"
+                        Margin="0,15,0,15"
+                        FontSize="23"
+                        HorizontalTextAlignment="Center"
+                        />
+                <Button Text="Tira dado"
+                        Pressed="DadoTirato"
+                        WidthRequest="200"
+                        FontSize="23"
+                        BackgroundColor="#463532"
+                        TextColor="White"
+                        Margin="23"/>
+
+                </VerticalStackLayout>
+        </Frame>
+            <Frame BackgroundColor="#906a63" WidthRequest="500" HeightRequest="250" >
+                <VerticalStackLayout>
+                        <Label  Text="Numero uscito:"
+                                FontSize="25"
+                                HorizontalOptions="Center"/>
+
+                        <Entry x:Name="EnNumeroUscito" 
+                                WidthRequest="200" 
+                                BackgroundColor="White"
+                                Margin="0,15,0,15"
+                                TextColor="Black"
+                                FontSize="23"
+                                HorizontalTextAlignment="Center"/>
+                        <Frame BackgroundColor="White" WidthRequest="400" HeightRequest="75" Margin="25" x:Name="FrameRis">
+                            <HorizontalStackLayout HorizontalOptions="Center" HeightRequest="75" >
+                                <Label  x:Name="EnRisultato" 
+                                        TextColor="Black"
+                                        HorizontalTextAlignment="End"
+                                        FontSize="25" />
+                                <Label x:Name="EnSoldi" 
+                                       TextColor="Black"
+                                       FontSize="25"/>
+                            </HorizontalStackLayout>
+                        </Frame>
+                    </VerticalStackLayout>
+            </Frame>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

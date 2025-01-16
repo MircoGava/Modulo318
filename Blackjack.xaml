@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProgettoCasinoGava.Blackjack"
+             Title="Blackjack"
+             BackgroundColor="#114d2a">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label 
+                Text="BlackJack"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                FontSize="55"
+                TextColor="White"/>
+            <Button Text="Inizia round"
+                    Pressed="buInizia"
+                    WidthRequest="250"
+                    FontSize="23"
+                    BackgroundColor="#1f402d"
+                    TextColor="White"
+                    Margin="23"
+                    x:Name="butInizia"/>
+            <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Margin="50">
+
+                <Frame BackgroundColor="#346f4d" WidthRequest="500">
+                    <VerticalStackLayout>
+                        <Label Text="Carte:"
+                               FontSize="25"
+                               HorizontalOptions="Center"/>
+
+                        <Entry  x:Name="EnCarte"
+                        WidthRequest="200"
+                        BackgroundColor="White"
+                        TextColor="Black"
+                        Margin="0,15,0,15"
+                        FontSize="23"
+                        HorizontalTextAlignment="Center"
+                        IsReadOnly="True"
+                        />
+                        <HorizontalStackLayout>
+                        <Button Text="Pesca"
+                        Pressed="buPesca"
+                        WidthRequest="175"
+                        FontSize="23"
+                        BackgroundColor="#1f402d"
+                        TextColor="White"
+                        Margin="23"
+                        IsEnabled="False"
+                        x:Name="butPesca"/>
+                        <Button Text="Resta"
+                        Pressed="buResta"
+                        WidthRequest="175"
+                        FontSize="23"
+                        BackgroundColor="#1f402d"
+                        TextColor="White"
+                        Margin="23"
+                        IsEnabled="False"
+                        x:Name="butResta"/>
+                        </HorizontalStackLayout>
+
+                    </VerticalStackLayout>
+                </Frame>
+                <Frame BackgroundColor="#346f4d" WidthRequest="500" HeightRequest="250" >
+                    <VerticalStackLayout>
+                        <Label  Text="Carte banco:"
+                                FontSize="25"
+                                HorizontalOptions="Center"/>
+
+                        <Entry x:Name="EnCarteBanco" 
+                                WidthRequest="200" 
+                                BackgroundColor="White"
+                                Margin="0,15,0,15"
+                                TextColor="Black"
+                                FontSize="23"
+                                IsReadOnly="True"
+                                HorizontalTextAlignment="Center"/>
+                        <Frame BackgroundColor="White" WidthRequest="400" HeightRequest="75" Margin="25" x:Name="FrameRis">
+                            <HorizontalStackLayout HorizontalOptions="Center" HeightRequest="75" >
+                                <Label  x:Name="EnRisultato" 
+                                        TextColor="Black"
+                                        HorizontalTextAlignment="End"
+                                        FontSize="25" />
+                            </HorizontalStackLayout>
+                        </Frame>
+                    </VerticalStackLayout>
+                </Frame>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
